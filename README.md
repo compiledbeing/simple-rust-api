@@ -1,10 +1,10 @@
-Simple Rust API — Axum JWT Backend
+Simple Rust API — Axum + JWT + PostgreSQL
 
-A clean, modular backend API written in Rust using Axum, featuring JWT authentication, password hashing, and a scalable project structure suitable for real-world backend services.
+A clean, modular backend API written in Rust using Axum, featuring JWT authentication, secure password hashing, and PostgreSQL integration via SQLx.
 
-This project is designed as a portfolio-grade backend demonstrating secure authentication, middleware usage, and idiomatic Rust architecture.
+This project is built as a portfolio-grade backend service demonstrating real-world backend patterns: authentication, middleware, database access, and idiomatic Rust architecture.
 
-✨ Features:
+✨ Features
 
 ✅ Axum-based HTTP API
 
@@ -12,36 +12,56 @@ This project is designed as a portfolio-grade backend demonstrating secure authe
 
 🔑 Secure password hashing (Argon2)
 
-🧱 Middleware-based auth protection
+🧱 Middleware-based route protection
 
-🧩 Modular architecture (auth / handlers / models / middleware)
+🗄️ PostgreSQL database integration
+
+⚡ Async SQL access with SQLx
+
+🧩 Modular, scalable project structure
 
 📦 Environment-based configuration
 
-🚀 Ready to scale into a production backend
+🚀 Production-oriented backend foundation
 
-src/
-├── app.rs              # App initialization
-├── main.rs             # Entry point
-├── router.rs           # Route definitions
-├── state.rs            # Shared application state
-│
-├── auth/               # Authentication logic
-│   ├── jwt.rs          # JWT creation & verification
-│   ├── password.rs     # Password hashing & verification
-│   └── mod.rs
-│
-├── middleware/
-│   ├── auth.rs         # JWT auth middleware
-│   └── mod.rs
-│
-├── handlers/           # HTTP request handlers
-│   ├── auth.rs         # Login / register
-│   ├── users.rs        # User-related endpoints
-│   └── mod.rs
-│
-├── models/             # Domain models
-│   ├── user.rs
-│   └── mod.rs
-│
-└── error.rs             # Centralized error handling
+## Tech Stack
+
+Language: Rust 🦀
+
+Web Framework: Axum
+
+Async Runtime: Tokio
+
+Authentication: JSON Web Tokens (JWT)
+
+Password Hashing: Argon2
+
+Database: PostgreSQL
+
+ORM / Query Layer: SQLx
+
+Configuration: dotenv + environment variables
+
+## Current Scope & Limitations
+This project focuses on backend fundamentals:
+
+❌ No refresh tokens yet
+
+❌ No role-based authorization
+
+❌ No pagination or filtering
+
+These are intentional and can be added incrementally.
+
+## Possible Future Improvements
+Refresh token rotation
+
+Role-Based Access Control (RBAC)
+
+Database migrations with SQLx
+
+Request validation layer
+
+OpenAPI / Swagger documentation
+
+Rate limiting and logging middleware
